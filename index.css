@@ -39,6 +39,11 @@ nav {
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
 }
 
 nav li {
@@ -48,7 +53,7 @@ nav li {
 	justify-content: space-between;
 }
 
-#Titulo nav .container {
+nav .container {
 	font-size: 1.2em;
 	height: 60px;
 	display: flex;
@@ -58,7 +63,7 @@ nav li {
 	text-align: center;
 }
 
-#Titulo nav .container a {
+nav .container a {
 	color: white;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -86,6 +91,7 @@ nav li {
 
 #Titulo h1 {
 	margin: 0;
+	font-size: 100px;
 }
 
 #Playas {
@@ -99,19 +105,20 @@ nav li {
 
 }
 
-#Playas .container {
+#Playas .containerP {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	align-content: center;
 	background-position: center center;
 	flex-direction: column;
-	background-color: wheat;
+	background-color: whitesmoke;
 	border-radius: 20px;
 	min-width: 550px;
 	max-width: 1400px;
 	text-align: justify;
 	margin: 50px;
+	margin-top: 10%;
 }
 
 #Playas p {
@@ -145,8 +152,6 @@ nav li {
 	width: 120px;
 	font-size: 1em;
 	margin: 20px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #Playas #linkFaro:hover {
