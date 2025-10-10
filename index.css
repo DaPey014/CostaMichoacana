@@ -180,6 +180,50 @@ nav .container a {
 	margin-top: 20px;
 }
 
+#Playas .hacienda {
+	background-image: url("img/hotel_hacienda_trinidad.png");
+	margin: auto;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 350px;
+	margin-top: 20px;
+}
+
+#Playas .camilaPalace {
+	background-image: url("img/hotel_Camila_Palace.png");
+	margin: auto;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 350px;
+	margin-top: 20px;
+}
+
+#Playas .kalakiAtl {
+	background-image: url("img/hotel_Kalaki_Atl.png");
+	margin: auto;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 350px;
+	margin-top: 20px;
+}
+
+#Playas .lasPeñas {
+	background-image: url("img/hotel_las_penas.png");
+	margin: auto;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 350px;
+	margin-top: 20px;
+}
+
 #servicios {
 	display: flex;
 	flex-direction: column;
@@ -209,7 +253,27 @@ nav .container a {
 	justify-content: flex-end;
 }
 
-#servicios #img{
+#servicios #imgServicio1{
+	background-image: url(img/servicios_boda_playa.jpeg);
+	height: 100%;
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 100px;
+	background-position-y: -100px;
+}
+
+#servicios #imgServicio2{
+	background-image: url(img/servicios_spa.jpg);
+	height: 100%;
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 100px;
+	background-position-y: -120px;
+}
+
+#servicios #imgServicio3{
 	background-image: url(img/ElFaro.jpg);
 	height: 100%;
 	width: 50%;
@@ -217,6 +281,7 @@ nav .container a {
 	background-size: cover;
 	border-radius: 100px;
 }
+
 
 @media (max-width: 720px) {
 	#Titulo nav .container {
