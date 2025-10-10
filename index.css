@@ -99,25 +99,22 @@ nav .container a {
 	flex-direction: row;
 	justify-content: space-evenly;
 	text-align: center;
-	height: 200vh;
 	align-items: baseline;
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
-
+	background-repeat: no-repeat;
 }
 
 #Playas .containerP {
-	justify-content: center;
 	align-items: center;
 	text-align: center;
 	align-content: center;
 	background-position: center center;
-	flex-direction: column;
 	background-color: whitesmoke;
-	border-radius: 20px;
 	min-width: 550px;
 	max-width: 1400px;
-	text-align: justify;
-	margin: 50px;
+	width: 30%;
+	text-align: left;
+	margin: 20px;
 	margin-top: 10%;
 }
 
@@ -125,13 +122,51 @@ nav .container a {
 	margin: 0;
 	padding: 20px 5px;
 	padding-left: 20px;
-	color: white;
+	color: black;
 	justify-content: justify;
+	padding: 5px;
+}
+
+#Playas h2 {
+	font-size: 2em;
 	margin: 10px;
 }
 
-#Playas .texto {
-	margin: 10px
+#Playas .containerP img{
+	height: 25px;
+	width: 25px;
+	margin-right: 10px;
+}
+
+#Playas .containerP a {
+	color: black;
+	font-size: 1.2em;
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
+
+.valoracion {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.valoracion input {
+    position: absolute;
+    top: -100px;
+}
+
+
+.valoracion label {
+    float: right;
+    color: #c1b8b8;
+    font-size: 50px; 
+}
+
+.valoracion label:hover,
+.valoracion label:hover ~ label,
+.valoracion input:checked ~ label {
+    color: #ffff00;
 }
 
 #Playas .img-cont {
@@ -142,23 +177,46 @@ nav .container a {
 	background-repeat: no-repeat;
 	height: 400px;
 	width: 350px;
+	margin-top: 20px;
 }
 
-#Playas button {
-	background-color: rgba(255, 255, 255, 0.653);
-	border-radius: 10px;
-	border-width: 0;
-	height: 60px;
-	width: 120px;
-	font-size: 1em;
+#servicios {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: center;
+	align-items: center;
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
+	height: 100vh;
+}
+
+#servicios h1 {
+	font-size: 5em;
+	margin: 10px;
+	text-align: center;
+	color: white;
+	margin-top: 100px;
+}
+
+#servicios #servicio1, #servicio2, #servicio3 {
+	width: 90%;
+	height: 250px;
+	background-color: rgba(255, 255, 255, 0.33);
+	border-radius: 100px;
 	margin: 20px;
+	align-items: right;
+	display: flex;
+	justify-content: flex-end;
 }
 
-#Playas #linkFaro:hover {
-	background-color: rgba(209, 179, 82);
+#servicios #img{
+	background-image: url(img/ElFaro.jpg);
+	height: 100%;
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 100px;
 }
-
-
 
 @media (max-width: 720px) {
 	#Titulo nav .container {
