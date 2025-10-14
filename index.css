@@ -109,13 +109,14 @@ nav .container a {
 	text-align: center;
 	align-content: center;
 	background-position: center center;
-	background-color: whitesmoke;
+	background-color: rgba(255, 255, 255, 0.33);
 	min-width: 550px;
 	max-width: 1400px;
 	width: 30%;
 	text-align: left;
 	margin: 20px;
 	margin-top: 10%;
+	border-radius: 20px;
 }
 
 #Playas p {
@@ -167,17 +168,6 @@ nav .container a {
 .valoracion label:hover ~ label,
 .valoracion input:checked ~ label {
     color: #ffff00;
-}
-
-#Playas .img-cont {
-	background-image: url("img/ElFaro.jpg");
-	margin: auto;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	height: 400px;
-	width: 350px;
-	margin-top: 20px;
 }
 
 #Playas .hacienda {
@@ -284,37 +274,38 @@ nav .container a {
 
 
 @media (max-width: 720px) {
-	#Titulo nav .container {
-		max-width: 1000px;
-		font-size: 1.5em;
-		height: 80px;
-	}
 
 	nav {
-		margin: 20px;
-		justify-self: left;
-		width: 70px;
-		height: 70px;
+		margin: 10px;
+		width: 65px;
+		height: 65px;
 		border-radius: 50%;
 	}
-
+	
 	.des-menu {
 		display: block;
+		margin: auto;
 	}
 
 	#menu {
 		display: none;
 		flex-direction: column;
-		position: absolute;
+		position: absolute; 
 		left: 0;
-		width: 100%;
+		top: 70px;
+		width: 150px;
 		padding: 10px 0;
 		text-align: center;
+		background-color: rgba(0, 0, 0, 0.50);
+		border-radius: 20px;
 	}
 
-	/* Menú activo */
-	#menu:hover {
+	#menu-toggle:checked ~ #menu {
 		display: flex;
+	}
+
+	#menu li {
+		margin: 10px 0;
 	}
 
 	#Titulo h1 {
@@ -327,17 +318,23 @@ nav .container a {
 
 	#Playas {
 		flex-direction: column;
-		justify-content: space-evenly;
+		height: auto;
+		width: 100%;
 	}
 
 	#Titulo #texto1 {
 		font-size: 2em;
 		margin: auto;
+		padding: 0 10px;
+
 	}
 
-	#Playas .container {
-		min-width: 80%;
-		margin: 10px;
+	#Playas .containerP {
+		min-width: auto;
+		margin: 10px auto;
+		padding: 10px;
+		width: 90%;
+		margin-top: 20px;
 	}
 
 	#Playas #textP1 {
@@ -347,18 +344,52 @@ nav .container a {
 		margin-top: 20px;
 		margin-left: 5%;
 		margin-right: 5%;
-		font-size: 1.8em;
+		font-size: 60px;
 		padding-bottom: 10%;
+
 	}
 
 	#Playas #linkFaro {
 		margin-top: 20px;
 		font-size: 1.5em;
+		margin-left: 5%;
+		margin-bottom: 20px;
 	}
 
-	#Playas .img-cont {
-		height: 400px;
-		width: 250px;
+	#Playas .hacienda{
+		width: auto;
+		height: 300px;
 		margin: auto;
+		margin-top: 10px;
+	}
+
+	#Playas .camilaPalace{
+		width: auto;
+		height: 300px;
+		margin: auto;
+		margin-top: 10px;
+	}
+
+	#Playas .kalakiAtl{
+		width: auto;
+		height: 300px;
+		margin: auto;
+		margin-top: 10px;
+	}
+
+	#Playas .lasPeñas{
+		width: auto;
+		height: 300px;
+		margin: auto;
+		margin-top: 10px;
+	}
+
+	#servicios h1 {
+		font-size: 3em;
+		margin-top: 50px;
+	}
+
+	#servicios #servicio1{
+		background-position-y: -50px;
 	}
 }
