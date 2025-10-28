@@ -217,7 +217,7 @@ nav .container a {
 #servicios {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	text-align: center;
 	align-items: center;
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
@@ -234,13 +234,14 @@ nav .container a {
 
 #servicios #servicio1, #servicio2, #servicio3 {
 	width: 90%;
-	height: 250px;
+	height: 100px;
 	background-color: rgba(255, 255, 255, 0.33);
 	border-radius: 100px;
 	margin: 20px;
 	align-items: right;
 	display: flex;
-	justify-content: flex-end;
+	flex-direction: row;
+	justify-content: space-between;	
 }
 
 #servicios #imgServicio1{
@@ -272,7 +273,84 @@ nav .container a {
 	border-radius: 100px;
 }
 
+#servicios #texto {
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+	justify-content: center;
+	width:45%;
+}
 
+#servicios a{
+	color: white;
+	text-decoration: none;
+}
+
+#Bodas {
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/boda_playa.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	margin-top: 0;
+	display: flex;
+}
+
+#Bodas #texto1{
+	display: flex;
+	flex-direction: column;
+	color: white;
+	text-align: left;
+	font-size: 1em;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.33);
+	border-radius: 20px;
+	width: 45%;
+	margin-left: 5%;
+	margin-top: 100px;
+}
+
+#Bodas #texto1 p{
+	text-align: justify;
+	margin: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#Bodas .textos{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 45%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 100px;
+}
+
+#Bodas #texto2, #texto3, #texto4, #texto5{
+	color: white;
+	text-align: center;
+	font-size: 0.8em;
+	background-color: rgba(0, 0, 0, 0.33);
+	border-radius: 20px;
+	height: auto;
+}
+
+#Bodas h2{
+	color: white;
+	text-align: left;
+	height: auto;
+	margin: 0;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#Bodas p{
+	text-align: left;
+	margin-left: 10px;
+	margin: 5px;
+}
 @media (max-width: 720px) {
 
 	nav {
@@ -389,7 +467,12 @@ nav .container a {
 		margin-top: 50px;
 	}
 
-	#servicios #servicio1{
-		background-position-y: -50px;
+	#imgServicio1, #imgServicio2, #imgServicio3 {
+		display: none;
+	}
+
+	#servicios #texto {
+		font-size: 1.5em;
+		width: 100%;
 	}
 }
