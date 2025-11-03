@@ -78,10 +78,8 @@ nav .container a {
 	flex-direction: column;
 	display: flex;
 	color: white;
-	background-image: linear-gradient(0deg,
-			rgba(0, 0, 0, 0.33)), url(img/fondo_web.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
+	/* background default removido: ahora usaremos un contenedor absoluto para el carrusel */
+	position: relative; /* necesario para posicionar el carrusel absoluto */
 }
 
 #Titulo #texto1 {
@@ -221,7 +219,7 @@ nav .container a {
 	text-align: center;
 	align-items: center;
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
-	height: 100vh;
+	height: auto;
 }
 
 #servicios h1 {
@@ -282,7 +280,7 @@ nav .container a {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	height: 100vh;
+	height: auto;
 	margin-top: 0;
 	display: flex;
 }
@@ -292,13 +290,11 @@ nav .container a {
 	place-content: center;
 	color: white;
 	text-align: left;
-	font-size: 1em;
 	background-color: rgba(0, 0, 0, 0.33);
 	border-radius: 20px;
 	width: 45%;
 	margin-left: 5%;
 	margin-top: 100px;
-	margin-bottom: 100px;
 }
 
 #Bodas #texto1 p{
@@ -306,7 +302,7 @@ nav .container a {
 	margin: 20px;
 	margin-left: 50px;
 	margin-right: 50px;
-	font-size: clamp(0.5em, 2.5vw, 3em);
+	font-size: 2.2em
 }
 
 #Bodas .textos{
@@ -372,29 +368,23 @@ nav .container a {
 	border-radius: 20px;
 }
 
-#Tours .containerP img{
-	height: 25px;
-	width: 25px;
-	margin-right: 10px;
-}
 
-#Tours .Ixtapilla .Bucerías {
-	margin: auto;
-	background-size: cover;
-	background-position: center center;
+#Tours .Ixtapilla, .albercas, .bucerias {
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
 	height: 400px;
-	width: 350px;
+	width: 350px; 
+	margin: auto auto;
 	margin-top: 20px;
 }
 
-#Tours .Ixtapilla {
-	background-image: url("img/ElFaro.jpg");
+#Tours .Ixtapilla img, .albercas img, .bucerias img {
+	width: 100%;
+	height: 100%;
 }
 
-#Tours.Bucerías{
-		background-image: url("#");
-}
 
 
 @media (max-width: 720px) {
@@ -518,7 +508,7 @@ nav .container a {
 	}
 
 	#servicios #texto {
-		font-size: 3em;
+		font-size: 1.5em;
 		width: 100%;
 	}
 
@@ -532,16 +522,115 @@ nav .container a {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 50px;
-		font-size: 0.7em;
+		font-size: 0.5em;
 	}
 
 	#Bodas .textos{
 		width: 90%;
 		margin-top: 50px;
-		font-size: 0.7em;
+		font-size: 0.5em;
 	}
 
 	#Bodas #texto2, #texto3, #texto4, #texto5{
 		margin-bottom: 20px;
 	}
+}
+
+.service-text span {
+	display: inline-block;
+	transition: transform 220ms cubic-bezier(.2,.9,.2,1), color 220ms;
+	will-change: transform;
+	cursor: default;
+}
+.service-text span.grow {
+	transform: scale(1.35);
+	color: #ffeb3b;
+}
+.service-text {
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#bg-carousel {
+	position: absolute;
+	inset: 0;
+	z-index: -1; 
+	overflow: hidden;
+}
+
+#bg-carousel .slide {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#bg-carousel .slide.show {
+	opacity: 1;
+}
+
+#bg-carousel::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(0deg, rgba(0,0,0,0.33), rgba(0,0,0,0.33));
+	pointer-events: none;
+}
+
+.news-list {
+	width: 100%;
+}
+.news-strip {
+	display: block;
+	width: 90%;
+	background: rgba(255,255,255,0.06);
+	color: white;
+	padding: 24px 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255,0.06);
+	border-bottom: 1px solid rgba(0,0,0,0.12);
+	transition: transform 220ms ease, background 220ms;
+}
+
+#noticias {
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: white;
+	margin:none;
+	height: 150vh;
+}
+
+#noticias h1 {
+	text-align: center;
+	margin-top: 0	;
+	padding-top: 40px;
+}
+
+.news-strip{
+	margin-bottom: 50px;
+}
+.news-strip h3 {
+	margin: 0 0 6px 0;
+	font-size: 1.6em;
+}
+.news-strip p {
+	margin: 0;
+	opacity: 0.95;
+}
+.news-strip:hover {
+	transform: scale(1.02);
+	background: rgba(255,255,255,0.10);
+}
+
+@media (max-width: 720px) {
+	.news-strip {
+		padding: 18px 20px;
+	}
+	.news-strip h3 { font-size: 1.3em; }
 }
