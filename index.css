@@ -168,58 +168,87 @@ nav .container a {
     color: #ffff00;
 }
 
-#Playas .hacienda {
-	background-image: url("img/hotel_hacienda_trinidad.png");
-	margin: auto;
-	background-size: cover;
-	background-position: center center;
+#Playas {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	align-items: baseline;
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: auto;
+}
+
+#Playas .containerP {
+	align-items: center;
+	text-align: center;
+	align-content: center;
+	background-position: center center;
+	background-color: rgb(227, 220, 220);
+	min-width: 550px;
+	max-width: 1400px;
+	width: 30%;
+	text-align: left;
+	margin: 20px;
+	margin-top: 10%;
+	border-radius: 20px;
+}
+
+#Playas .hacienda,  .kalakiAtl, .lasPeñas, .camilaPalace {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
 	height: 400px;
-	width: 350px;
+	width: 350px; 
+	margin: auto auto;
 	margin-top: 20px;
 }
 
-#Playas .camilaPalace {
-	background-image: url("img/hotel_Camila_Palace.png");
-	margin: auto;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	height: 400px;
-	width: 350px;
+#Playas .hacienda img {
+	width: 90%;
+	height: 90%;
 	margin-top: 20px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
-#Playas .kalakiAtl {
-	background-image: url("img/hotel_Kalaki_Atl.png");
-	margin: auto;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	height: 400px;
-	width: 350px;
+#Playas .camilaPalace img {
+	width: 90%;
+	height: 90%;
 	margin-top: 20px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
-#Playas .lasPeñas {
-	background-image: url("img/hotel_las_penas.png");
-	margin: auto;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	height: 400px;
-	width: 350px;
+#Playas .kalakiAtl img{
+	width: 90%;
+	height: 90%;
 	margin-top: 20px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#Playas .lasPeñas img {
+	width: 90%;
+	height: 90%;
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 #servicios {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	text-align: center;
 	align-items: center;
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
-	height: auto;
+	height: 100vh;
+	background-position: center center;
+	background-size: cover;
 }
 
 #servicios h1 {
@@ -351,6 +380,9 @@ nav .container a {
 	align-items: baseline;
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.33)), url(img/jonathan-borba-TlrVTwdg7LA-unsplash.jpg);
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: auto;
 }
 
 #Tours .containerP {
@@ -369,7 +401,7 @@ nav .container a {
 }
 
 
-#Tours .Ixtapilla, .albercas, .bucerias {
+#Tours .Ixtapilla, .albercas, .bucerias, .Dunas {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -380,7 +412,7 @@ nav .container a {
 	margin-top: 20px;
 }
 
-#Tours .Ixtapilla img, .albercas img, .bucerias img {
+#Tours .Ixtapilla img, .albercas img, .bucerias img, .Dunas img {
 	width: 100%;
 	height: 100%;
 }
@@ -607,13 +639,14 @@ nav .container a {
 }
 
 #noticias h1 {
+	font-size: 5em;
 	text-align: center;
-	margin-top: 0	;
-	padding-top: 40px;
+	margin-top: 0;
+	padding-top: 100px;
 }
 
 .news-strip{
-	margin-bottom: 50px;
+	margin: auto auto 50px;
 }
 .news-strip h3 {
 	margin: 0 0 6px 0;
